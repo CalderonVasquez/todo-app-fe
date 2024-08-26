@@ -1,0 +1,86 @@
+/*  ------------------------ Fonts ------------------------ */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('path/to/fonts/JosefinSans-Regular.woff2') format('woff2'),
+         url('path/to/fonts/JosefinSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('path/to/fonts/JosefinSans-Bold.woff2') format('woff2'),
+         url('path/to/fonts/JosefinSans-Bold.woff') format('woff');
+}
+/*  -------------------------- End Fonts ------------------------- */
+       
+/* ------------------------ RESETS ------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/* ------------------------ END RESETS ------------------- */
+
+
+/* ------------------------ Colors ------------------- */
+:root {
+    /* Primary */
+    --color-bright-blue: hsl(220, 98%, 61%);
+    --color-check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    /* Light Theme */
+    --color-very-light-gray: hsl(0, 0%, 98%);
+    --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+    --color-light-grayish-blue: hsl(233, 11%, 84%);
+    --color-dark-grayish-blue: hsl(236, 9%, 61%);
+    --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+    /* Dark Theme */
+    --color-very-dark-blue: hsl(235, 21%, 11%);
+    --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --color-light-grayish-blue-dark: hsl(234, 39%, 85%);
+    --color-light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --color-dark-grayish-blue-dark: hsl(234, 11%, 52%);
+    --color-very-dark-grayish-blue-dark-1: hsl(233, 14%, 35%);
+    --color-very-dark-grayish-blue-dark-2: hsl(237, 14%, 26%);
+}
+/* ------------------------ END Colors ------------------- */
+
+

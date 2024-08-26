@@ -1,16 +1,17 @@
-/* eslint-disable react/no-unknown-property */
-
 const App = () => {
     return (
-        <div class="todo-app">
-            <h1>TODO</h1>
+        <div className="todo-app">
+            <div className="header">
+                <h1>TODO</h1>
+                <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon" />
+            </div>
 
             <form>
-                <label for="new-todo" class="visually-hidden">Create a new todo</label>
+                <label htmlFor="new-todo" className="visually-hidden">Create a new todo</label>
                 <input
                     type="text"
                     id="new-todo"
-                    class="new-todo"
+                    className="new-todo"
                     placeholder="Create a new todo..."
                     aria-label="Create a new todo"
                 />
@@ -19,29 +20,29 @@ const App = () => {
             <ul aria-labelledby="todo-list">
                 <li>
                     <input type="checkbox" id="todo-1" />
-                    <label for="todo-1">Learn React</label>
+                    <label htmlFor="todo-1">Learn React</label>
                 </li>
                 <li>
                     <input type="checkbox" id="todo-2" />
-                    <label for="todo-2">Build a Todo App</label>
+                    <label htmlFor="todo-2">Build a Todo App</label>
                 </li>
                 <li>
                     <input type="checkbox" id="todo-3" />
-                    <label for="todo-3">Master JavaScript</label>
+                    <label htmlFor="todo-3">Master JavaScript</label>
                 </li>
                 <li>
                     <input type="checkbox" id="todo-4" />
-                    <label for="todo-4">Explore Vite</label>
+                    <label htmlFor="todo-4">Explore Vite</label>
                 </li>
                 <li>
                     <input type="checkbox" id="todo-5" />
-                    <label for="todo-5">Practice Coding</label>
+                    <label htmlFor="todo-5">Practice Coding</label>
                 </li>
             </ul>
 
-            <div class="todo-footer">
+            <div className="todo-footer">
                 <p>5 items left</p>
-                <div class="filters">
+                <div className="filters">
                     <button type="button">All</button>
                     <button type="button">Active</button>
                     <button type="button">Completed</button>
@@ -49,8 +50,7 @@ const App = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
-export default App
+export default App;
