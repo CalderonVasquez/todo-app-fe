@@ -58,6 +58,9 @@ a {
 }
 /* ------------------------ END RESETS ------------------- */
 
+/* ------------------------ Global styles ------------------- */
+
+
 
 /* ------------------------ Colors ------------------- */
 :root {
@@ -83,4 +86,31 @@ a {
 }
 /* ------------------------ END Colors ------------------- */
 
+.todo-app {
+  background-image: url(images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 4.375rem 28.125rem 0 28.125rem;
+  max-width: 1440px;
+}
 
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--color-very-light-gray); 
+}
+.header img {
+  width: 21px;
+  height: 21px;
+}
+
+.new-todo {
+  width: 540px;
+  height: 64px;
+  padding: 1.438rem 19.5rem 1.438rem 4.5rem;
+}

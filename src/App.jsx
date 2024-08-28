@@ -7,7 +7,7 @@ const App = () => {
             </div>
 
             <form>
-                <label htmlFor="new-todo" className="visually-hidden">Create a new todo</label>
+                {/* <label htmlFor="new-todo" className="visually-hidden">Create a new todo</label> */}
                 <input
                     type="text"
                     id="new-todo"
