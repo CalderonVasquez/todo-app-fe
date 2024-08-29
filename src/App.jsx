@@ -43,10 +43,10 @@ const App = () => {
             <div className="todo-footer">
                 <p>5 items left</p>
                 <div className="filters">
-                    <button type="button">All</button>
+                    <button className="blue-btn" type="button">All</button>
                     <button type="button">Active</button>
-                    <button type="button">Completed</button>
-                    <button type="button">Delete</button>
+                    <button className="btn-margin" type="button">Completed</button>
+                    <button className="btn-clear" type="button">Clear Completed</button>
                 </div>
             </div>
         </div>

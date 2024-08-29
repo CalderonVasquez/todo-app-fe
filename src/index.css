@@ -89,9 +89,10 @@ a {
 .todo-app {
   background-image: url(images/bg-desktop-light.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   height: 300px;
   padding: 4.375rem 28.125rem 0 28.125rem;
-  max-width: 1440px;
+  width: 100%;
 }
 
 .header{
@@ -113,4 +114,69 @@ a {
   width: 540px;
   height: 64px;
   padding: 1.438rem 19.5rem 1.438rem 4.5rem;
+  margin-bottom: 1.5rem;
 }
+ul[aria-labelledby="todo-list"] {
+  background-color: var(--color-very-light-gray);
+  width: 540px;
+  height: 439px;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  border-radius: 8px; 
+  overflow-y: auto; 
+}
+
+ul[aria-labelledby="todo-list"] li {
+  display: flex;
+  align-items: center;
+  padding: .625rem 1.25rem;
+  font-size: 1.125rem;
+  color: var(--color-very-dark-grayish-blue);
+  border-bottom: 1px solid  var(--color-very-light-grayish-blue);
+}
+
+ul[aria-labelledby="todo-list"] input[type="checkbox"] {
+  margin-right: 1.5rem; 
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid var(--color-very-light-grayish-blue);
+}
+.todo-footer {
+  display: flex;
+  width: 540px;
+  cursor: pointer;
+  background-color: var(--color-very-light-gray);
+}
+
+.todo-footer p {
+  font-size: 0.875rem;
+  margin: 0 6rem 1rem 1.5rem;
+  color: #9495A5;
+  font-weight: 400;
+
+}
+
+ button {
+  font-size: 0.875rem;
+  border: none;
+  color: #9495A5;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--color-very-light-gray);
+}
+.blue-btn {
+  color: var(--color-bright-blue);
+}
+.btn-margin {
+  margin-right: 3.5rem;
+}
+.btn-clear {
+  color: #9495A5;
+  font-weight: 400;
+}
+
