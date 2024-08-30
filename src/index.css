@@ -86,7 +86,7 @@ a {
 }
 /* ------------------------ END Colors ------------------- */
 
-.todo-app {
+/* .todo-app {
   background-image: url(images/bg-desktop-light.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,7 +111,8 @@ a {
 }
 
 .new-todo {
-  width: 540px;
+  width: 100;
+  max-width: 540px;
   height: 64px;
   padding: 1.438rem 19.5rem 1.438rem 4.5rem;
   margin-bottom: 1.5rem;
@@ -178,5 +179,5 @@ ul[aria-labelledby="todo-list"] input[type="checkbox"] {
 .btn-clear {
   color: #9495A5;
   font-weight: 400;
-}
+} */
 
