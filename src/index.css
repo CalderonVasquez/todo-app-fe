@@ -140,11 +140,35 @@ a {
   padding-bottom: 1.25rem;
 }
 .todo-list li input[type="checkbox"] {
-  appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
+  appearance: none; 
+  width: 1.5rem; 
+  height: 1.5rem; 
+  border-radius: 50%; 
+  border: 1px solid var(--color-very-light-grayish-blue); 
+  margin-right: 1rem; 
+  cursor: pointer; 
+  outline: none; 
+  position: relative;
+  background-color: #fff; 
 }
+
+.todo-list li input[type="checkbox"]:checked {
+  background-color: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todo-list li input[type="checkbox"]:checked::after {
+  content: ""; 
+  display: block;
+  width: 0.75rem; 
+  height: 0.75rem; 
+  background-color: #fff; 
+  border-radius: 50%; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
 .todo-footer{
   display: flex;
   justify-content: space-between;
