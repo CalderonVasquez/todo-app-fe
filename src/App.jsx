@@ -46,8 +46,8 @@ const App = () => {
                             <button className="blue-btn" type="button">All</button>
                             <button type="button">Active</button>
                             <button type="button">Completed</button>
-                            <button type="button">Clear Completed</button>
                         </div>
+                        <button className="last-btn" type="button">Clear Completed</button>
                     </div>
                 </div>
             </div>
