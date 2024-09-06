@@ -152,7 +152,7 @@ a {
   background-color: #fff; 
 }
 
-.todo-list li input[type="checkbox"]:checked {
+.todo-list li input[type="checkbox"]:checked + label::before {
   background-color: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
