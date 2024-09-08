@@ -224,3 +224,10 @@ a {
   font-weight: 400;
 }
 
+
+/* ------------- media query ------------- */
+@media only screen and (max-width: 540px) {
+  .todo-app-wrapper {
+    padding: 0 1.5rem;
+  }
+}
