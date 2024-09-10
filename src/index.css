@@ -77,15 +77,26 @@ a {
 
 
 .todo-app {
-  width: 100%;
+  /* width: 100%;
   height: 300px;
   background-image: url(images/bg-desktop-light.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: var(--color-very-light-gray);
+  height: 800px;
+}
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 .todo-app-wrapper {
   max-width: 33.75rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .header {
@@ -179,28 +190,40 @@ a {
   cursor: pointer;
   margin-left: auto;
 }
-
 .todo-footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
+  flex-wrap: wrap;
 }
+/* General layout for larger screens */
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  flex-wrap: wrap;
+}
+
 .todo-footer p {
   font-size: 0.875rem;
   color: var(--color-dark-grayish-blue);
   font-weight: 400;
 }
-.filter-btn .blue-btn{
+
+.filter-btn .blue-btn {
   color: var(--color-bright-blue);
   font-weight: 700;
 }
-.fliter-btn {
+
+.filter-btn {
   display: flex;
   gap: 1.125rem;
   flex-grow: 1;
   justify-content: center;
 }
+
 .filter-btn button {
   color: var(--color-dark-grayish-blue);
   font-weight: 700;
@@ -212,6 +235,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .todo-footer > button:last-of-type {
   color: var(--color-dark-grayish-blue);
   font-size: 0.875rem;
@@ -224,10 +248,34 @@ a {
   font-weight: 400;
 }
 
-
-/* ------------- media query ------------- */
+/* ------------- media query for mobile (540px) ------------- */
 @media only screen and (max-width: 540px) {
   .todo-app-wrapper {
     padding: 0 1.5rem;
   }
+  .todo-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  /* Flex row for '5 items left' and 'Clear Completed' */
+  .todo-footer p,
+  .todo-footer > button:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Center the filter buttons */
+  .filter-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Make sure it takes full width */
+    order: 2; /* Place it below '5 items left' and 'Clear Completed' */
+    margin-top: 1rem; /* Add some spacing */
+  }
 }
+
+

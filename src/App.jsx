@@ -1,9 +1,9 @@
 const App = () => {
     return (
         <div className="todo-app">
-            
+            <img src="images/bg-desktop-light.jpg" alt="mountain range" className="hero-img"></img>
                 <div className="todo-app-wrapper">
-                    <div className="header">
+                <div className="header">
                         <h1>TODO</h1>
                         <button>
                             <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon"/>
