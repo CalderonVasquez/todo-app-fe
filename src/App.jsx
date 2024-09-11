@@ -53,7 +53,19 @@ const App = () => {
                             </div>
                             <button className="last-btn" type="button">Clear Completed</button>
                         </div>
+                </div>
+                <div className="mobile-todo-footer">
+                    <div className="mobile-footer-info">
+                        <p>5 items left</p>
+                        <button className="mobile-last-btn" type="button">Clear Completed</button>
                     </div>
+                    <div className="mobile-filter-btn">
+                        <button className="mobile-blue-btn" type="button">All</button>
+                        <button type="button">Active</button>
+                        <button type="button">Completed</button>
+                    </div>
+                </div>
+
                
             </div>
         </div>
