@@ -2,6 +2,7 @@ const App = () => {
     return (
         <div className="todo-app">
             <img src="images/bg-desktop-light.jpg" alt="mountain range" className="hero-img"></img>
+            <img src="images/bg-mobile-light.jpg" alt="mountain range" className="mobile-hero-img"></img>
                 <div className="todo-app-wrapper">
                 <div className="header">
                         <h1>TODO</h1>

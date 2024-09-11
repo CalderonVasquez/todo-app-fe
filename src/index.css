@@ -93,6 +93,9 @@ a {
   height: 300px;
   object-fit: cover;
 }
+.mobile-hero-img {
+  display: none;
+}
 .todo-app-wrapper {
   max-width: 33.75rem;
   margin: 0 auto;
@@ -244,8 +247,39 @@ a {
 
 /* ------------- media query for mobile (540px) ------------- */
 @media only screen and (max-width: 500px) {
+  .hero-img {
+    display: none;
+  }
+  .mobile-hero-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+  .header h1 {
+    font-size: 1.75rem;
+    letter-spacing: 10px;
+    margin-top: 3rem;
+  }
+  .header button {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .todo-form input{
+    width: 20.438rem;
+    height: 3rem;
+  }
   .todo-app-wrapper {
     padding: 0 1.5rem;
+  }
+  .todo-list-wrapper {
+    padding-bottom: 0;
+  }
+  .todo-list li {
+    font-size: .75rem;
   }
   .todo-footer {
     display: none;
@@ -254,29 +288,26 @@ a {
     display: block;
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
   }
   .mobile-footer-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    padding-bottom: 1.25rem;
+    background: #fff;
   }
   .mobile-filter-btn {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-  }
-  .mobile-footer-info {
     background: #fff;
+    padding: .938rem 5rem 1.188rem 5.063rem ;
+    gap: .938rem;
   }
   .mobile-todo-footer p {
     font-size: 0.875rem;
     color: var(--color-dark-grayish-blue);
     font-weight: 400;
-  }
-  .mobile-filter-btn {
-    background: #fff;
-    padding: .938rem 5rem 1.188rem 5.063rem ;
+    padding-left: 1.25rem;
   }
   .mobile-filter-btn .mobile-blue-btn {
   color: var(--color-bright-blue);
@@ -294,16 +325,17 @@ a {
     justify-content: center;
   }
   .mobile-last-btn {
-  color: var(--color-dark-grayish-blue);
-  font-size: 0.875rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
-}
+    color: var(--color-dark-grayish-blue);
+    font-size: 0.875rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    padding-right: 1.25rem;
+  }
 }
 
 
