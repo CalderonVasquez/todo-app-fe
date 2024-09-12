@@ -143,7 +143,7 @@ a {
   padding-bottom: 1rem;
   background-color: #fff;
   border-radius: .40rem;
-
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .todo-list {
   display: flex;
@@ -202,6 +202,7 @@ a {
   align-items: center;
   padding-left: 1.50rem;
   flex-wrap: wrap;
+
 }
 .todo-footer p {
   font-size: 0.875rem;
@@ -314,12 +315,14 @@ a {
     display: block;
     flex-direction: column;
     align-items: stretch;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
   .mobile-footer-info {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1.25rem;
     background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
   .mobile-filter-btn {
     display: flex;
