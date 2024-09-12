@@ -277,10 +277,11 @@ a {
     margin-bottom: 2.5rem;
   }
   .header button {
-    width: 1.80rem;
-    height: 1.80rem;
+    width: 1.125rem;
+    height: 1.125rem;
     margin-top: .50rem;
     margin-bottom: 2.5rem;
+    padding: 0;
   }
   .todo-form input{
     width: 100%;
