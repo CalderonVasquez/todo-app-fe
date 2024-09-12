@@ -9,7 +9,7 @@ const App = () => {
                         <button>
                             <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon"/>
                         </button>
-                    </div>
+                </div>
                     <form className="todo-form">
                         <input
                             type="text"
