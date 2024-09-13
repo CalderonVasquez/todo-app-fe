@@ -31,18 +31,30 @@ const App = () => {
                             <li>
                                 <input type="checkbox" id="todo-2" />
                                 <label htmlFor="todo-2">Build a Todo App</label>
+                                <button className="delete-btn">
+                                    <img src="images/icon-cross.svg" alt="x button" />
+                                </button>
                             </li>
                             <li>
                                 <input type="checkbox" id="todo-3" />
                                 <label htmlFor="todo-3">Master JavaScript</label>
+                                <button className="delete-btn">
+                                    <img src="images/icon-cross.svg" alt="x button" />
+                                </button>
                             </li>
                             <li>
                                 <input type="checkbox" id="todo-4" />
                                 <label htmlFor="todo-4">Explore Vite</label>
+                                <button className="delete-btn">
+                                    <img src="images/icon-cross.svg" alt="x button" />
+                                </button>
                             </li>
                             <li>
                                 <input type="checkbox" id="todo-5" />
                                 <label htmlFor="todo-5">Practice Coding</label>
+                                <button className="delete-btn">
+                                    <img src="images/icon-cross.svg" alt="x button" />
+                                </button>
                             </li>
                         </ul>
                         <div className="todo-footer">
