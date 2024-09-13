@@ -195,6 +195,7 @@ a {
   background: none;
   cursor: pointer;
   margin-left: auto;
+  display: none;
 }
 .todo-footer{
   display: flex;
@@ -302,10 +303,12 @@ a {
     font-size: .75rem;
   }
   .delete-btn {
+    display: block;
     margin-right: 1.5rem;
     width: 12px;
     height: 12px;
     padding: 0;
+    cursor: pointer;
   }
   .todo-footer {
     display: none;
