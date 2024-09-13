@@ -78,8 +78,6 @@ const App = () => {
                         <button type="button">Completed</button>
                     </div>
                 </div>
-
-               
             </div>
         </div>
     )
