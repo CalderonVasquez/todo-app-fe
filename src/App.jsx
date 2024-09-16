@@ -22,7 +22,7 @@ const App = () => {
                     <div className="todo-list-wrapper">
                         <ul className="todo-list">
                             <li>
-                                <input type="checkbox" id="todo-1" />
+                                <input type="checkbox" id="todo-1" defaultChecked />
                                 <label htmlFor="todo-1">Learn React</label>
                                 <button className="delete-btn">
                                     <img src="images/icon-cross.svg" alt="x button" />
