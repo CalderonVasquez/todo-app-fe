@@ -1,4 +1,17 @@
-const App = () => {
+/* eslint-disable react/prop-types */
+import Todo from "./components/Todo";
+
+const App = (props) => {
+
+    const taskList = props.tasks.map(task =>
+        <Todo 
+            key={task.id}
+            name={task.name}
+            id={task.id}
+            completed={task.completed}
+        />
+    )
+
     return (
         <div className="todo-app">
             <img src="images/bg-desktop-light.jpg" alt="mountain range" className="hero-img"></img>
@@ -21,41 +34,7 @@ const App = () => {
                     </form>
                     <div className="todo-list-wrapper">
                         <ul className="todo-list">
-                            <li>
-                                <input type="checkbox" id="todo-1" defaultChecked />
-                                <label htmlFor="todo-1">Learn React</label>
-                                <button className="delete-btn">
-                                    <img src="images/icon-cross.svg" alt="x button" />
-                                </button>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="todo-2" />
-                                <label htmlFor="todo-2">Build a Todo App</label>
-                                <button className="delete-btn">
-                                    <img src="images/icon-cross.svg" alt="x button" />
-                                </button>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="todo-3" />
-                                <label htmlFor="todo-3">Master JavaScript</label>
-                                <button className="delete-btn">
-                                    <img src="images/icon-cross.svg" alt="x button" />
-                                </button>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="todo-4" />
-                                <label htmlFor="todo-4">Explore Vite</label>
-                                <button className="delete-btn">
-                                    <img src="images/icon-cross.svg" alt="x button" />
-                                </button>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="todo-5" />
-                                <label htmlFor="todo-5">Practice Coding</label>
-                                <button className="delete-btn">
-                                    <img src="images/icon-cross.svg" alt="x button" />
-                                </button>
-                            </li>
+                            {taskList}
                         </ul>
                         <div className="todo-footer">
                             <p>5 items left</p>
@@ -84,3 +63,10 @@ const App = () => {
 }
 
 export default App;
+
+
+// Learn React todo-0
+// Build a Todo App todo-1
+// Master JavaScript todo-2
+// Explore Vite todo-3
+// Practice Coding todo-4
