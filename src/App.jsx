@@ -1,16 +1,39 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import Todo from "./components/Todo";
+import Form from "./components/Form";
+import {nanoid} from "nanoid"
 
 const App = (props) => {
+    const [tasks, setTasks] = useState(props.tasks)
 
-    const taskList = props.tasks.map(task =>
+    const addTask = (name) => {
+        const newTask = { id: `todo-${nanoid()}`, name, completed: false }
+        setTasks([...tasks, newTask])
+    }
+
+    const toggleTaskCompleted = (id) => {
+        setTasks(updatedTasks => updatedTasks.map(task => 
+            id === task.id ? {...task, completed: !task.completed} : task))
+    }
+
+    const deleteTask = (id) => {
+        setTasks(remainingTask => remainingTask.filter(task => id !== task.id))
+    }
+
+    const taskList = tasks.map(task =>
         <Todo 
             key={task.id}
             name={task.name}
             id={task.id}
             completed={task.completed}
+            toggleTaskCompleted={() => toggleTaskCompleted(task.id)}
+            deleteTask={() => deleteTask(task.id)}
         />
     )
+
+    const itemOrItems = taskList.length === 1 ? "item" : "items"
+    const amountOfItems = `${taskList.length} ${itemOrItems} left`
 
     return (
         <div className="todo-app">
@@ -23,21 +46,13 @@ const App = (props) => {
                             <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon"/>
                         </button>
                 </div>
-                    <form className="todo-form">
-                        <input
-                            type="text"
-                            id="new-todo"
-                            className="new-todo"
-                            placeholder="Create a new todo..."
-                            aria-label="Create a new todo"
-                        />
-                    </form>
+                    <Form addTask={addTask} />
                     <div className="todo-list-wrapper">
                         <ul className="todo-list">
                             {taskList}
                         </ul>
                         <div className="todo-footer">
-                            <p>5 items left</p>
+                            <p>{amountOfItems}</p>
                             <div className="filter-btn">
                                 <button className="blue-btn" type="button">All</button>
                                 <button type="button">Active</button>
@@ -48,7 +63,7 @@ const App = (props) => {
                 </div>
                 <div className="mobile-todo-footer">
                     <div className="mobile-footer-info">
-                        <p>5 items left</p>
+                        <p>{amountOfItems}</p>
                         <button className="mobile-last-btn" type="button">Clear Completed</button>
                     </div>
                     <div className="mobile-filter-btn">
