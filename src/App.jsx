@@ -2,10 +2,20 @@
 import { useState } from "react";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
-import {nanoid} from "nanoid"
+import FilterButton from "./components/FilterButton";
+import { nanoid } from "nanoid"
+
+const FILTER_MAP = {
+    All: () => true,
+    Active: (task) => !task.completed,
+    Completed: (task) => task.completed,
+}
+
+const FILTER_NAMES = Object.keys(FILTER_MAP)
 
 const App = (props) => {
     const [tasks, setTasks] = useState(props.tasks)
+    const [filter, setFilter] = useState("All")
 
     const addTask = (name) => {
         const newTask = { id: `todo-${nanoid()}`, name, completed: false }
@@ -21,7 +31,13 @@ const App = (props) => {
         setTasks(remainingTask => remainingTask.filter(task => id !== task.id))
     }
 
-    const taskList = tasks.map(task =>
+    const clearCompleted = () => {
+        setTasks(tasks.filter(task => !task.completed))
+    }
+
+    const taskList = tasks
+        .filter(FILTER_MAP[filter])
+        .map(task =>
         <Todo 
             key={task.id}
             name={task.name}
@@ -29,6 +45,15 @@ const App = (props) => {
             completed={task.completed}
             toggleTaskCompleted={() => toggleTaskCompleted(task.id)}
             deleteTask={() => deleteTask(task.id)}
+        />
+    )
+
+    const filterList = FILTER_NAMES.map(name => 
+        <FilterButton 
+            key={name}
+            name={name}
+            isPressed={name === filter}
+            setFilter={() => setFilter(name)}
         />
     )
 
@@ -54,22 +79,28 @@ const App = (props) => {
                         <div className="todo-footer">
                             <p>{amountOfItems}</p>
                             <div className="filter-btn">
-                                <button className="blue-btn" type="button">All</button>
-                                <button type="button">Active</button>
-                                <button type="button">Completed</button>
+                                {filterList}
                             </div>
-                            <button className="last-btn" type="button">Clear Completed</button>
+                        <button
+                            className="last-btn"
+                            type="button"
+                            onClick={clearCompleted}>
+                            Clear Completed
+                        </button>
                         </div>
                 </div>
                 <div className="mobile-todo-footer">
                     <div className="mobile-footer-info">
                         <p>{amountOfItems}</p>
-                        <button className="mobile-last-btn" type="button">Clear Completed</button>
+                        <button
+                            className="mobile-last-btn"
+                            type="button"
+                            onClick={clearCompleted}>
+                            Clear Completed
+                        </button>
                     </div>
                     <div className="mobile-filter-btn">
-                        <button className="mobile-blue-btn" type="button">All</button>
-                        <button type="button">Active</button>
-                        <button type="button">Completed</button>
+                        {filterList}
                     </div>
                 </div>
             </div>
@@ -78,10 +109,3 @@ const App = (props) => {
 }
 
 export default App;
-
-
-// Learn React todo-0
-// Build a Todo App todo-1
-// Master JavaScript todo-2
-// Explore Vite todo-3
-// Practice Coding todo-4

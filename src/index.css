@@ -223,7 +223,8 @@ a {
   font-weight: 400;
 }
 
-.filter-btn .blue-btn {
+.filter-btn 
+.blue-btn {
   color: var(--color-bright-blue);
   font-weight: 700;
 }
@@ -268,7 +269,7 @@ a {
     padding: 1.5rem;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 459px) {
   .hero-img {
     display: none;
   }
