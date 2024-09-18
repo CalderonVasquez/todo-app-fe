@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
@@ -14,8 +14,22 @@ const FILTER_MAP = {
 const FILTER_NAMES = Object.keys(FILTER_MAP)
 
 const App = (props) => {
-    const [tasks, setTasks] = useState(props.tasks)
-    const [filter, setFilter] = useState("All")
+    const [tasks, setTasks] = useState(props.tasks);
+    const [filter, setFilter] = useState("All");
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 459);
+        }
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
+
+    
 
     const addTask = (name) => {
         const newTask = { id: `todo-${nanoid()}`, name, completed: false }
@@ -54,6 +68,7 @@ const App = (props) => {
             name={name}
             isPressed={name === filter}
             setFilter={() => setFilter(name)}
+            isMobile={isMobile}
         />
     )
 
