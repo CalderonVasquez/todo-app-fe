@@ -75,17 +75,11 @@ a {
 }
 /* ------------------------ END Colors ------------------- */
 
-
 .todo-app {
-  /* width: 100%;
-  height: 300px;
-  background-image: url(images/bg-desktop-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
   background-color: var(--color-very-light-gray);
   height: 800px;
 }
-.hero-img {
+.hero-img-light {
   position: absolute;
   top: 0;
   left: 0;
@@ -93,7 +87,7 @@ a {
   height: 300px;
   object-fit: cover;
 }
-.mobile-hero-img {
+.mobile-hero-light {
   display: none;
 }
 .todo-app-wrapper {
@@ -263,6 +257,42 @@ a {
   display: none;
 }
 
+/*  ---------------- Dark Mode -------------------- */
+
+.dark-mode .light-mode-icon .hero-img-dark .mobile-hero-dark { display: none; }
+.dark-mode .dark-mode-icon .hero-img-light { display: block; }
+
+.dark-mode .todo-app {
+  background-color: var(--color-very-dark-blue);
+}
+.dark-mode .todo-form input {
+  background-color: var(--color-very-dark-desaturated-blue);
+  border: var(--color-very-dark-desaturated-blue);
+}
+.dark-mode .todo-list-wrapper {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+.dark-mode .todo-list li {
+  color: var(--color-light-grayish-blue-dark);
+  border-bottom: 1px solid var(--color-dark-grayish-blue-dark);
+}
+.dark-mode .todo-list li input[type="checkbox"] {
+  border: 1px solid var(--color-dark-grayish-blue-dark);
+  background-color: var(--color-very-dark-desaturated-blue); 
+}
+
+.dark-mode .todo-footer p {
+  color: var(--color-very-dark-grayish-blue-dark-1);
+}
+.dark-mode .filter-btn button {
+  color: var(--color-very-dark-grayish-blue-dark-1);
+}
+.dark-mode .todo-footer > button:last-of-type {
+  color: var(--color-very-dark-grayish-blue-dark-1);
+}
+/*  ---------------- End Dark Mode -------------------- */
+
+
 /* ------------- media query for mobile (540px) ------------- */
 @media only screen and (max-width: 540px) {
   .todo-app {
@@ -270,14 +300,14 @@ a {
   }
 }
 @media only screen and (max-width: 459px) {
-  .hero-img {
+  .hero-img-light {
     display: none;
   }
   .header {
     max-width: 20.438rem;
     margin-bottom: 1.75rem;
   }
-  .mobile-hero-img {
+  .mobile-hero-light {
   display: block;
   position: absolute;
   top: 0;
@@ -385,6 +415,7 @@ a {
     font-weight: 400;
     padding-right: 1.25rem;
   }
+
 }
 
 
