@@ -259,20 +259,22 @@ a {
 
 /*  ---------------- Dark Mode -------------------- */
 
-.dark-mode .light-mode-icon {
-  display: none;
-}
+
 .dark-mode .hero-img-dark {
   display: none;
 }
 .dark-mode .mobile-hero-dark {
   display: none;
 } 
+  .dark-mode .light-mode-icon {
+  display: none;
+}
 
 /* .dark-mode .dark-mode-icon  { 
   display: block; 
 } */
-/* .dark-mode .hero-img-light {
+
+  /* .dark-mode .hero-img-light {
   display: block;
 } */
 
@@ -448,6 +450,8 @@ a {
     font-weight: 400;
     padding-right: 1.25rem;
   }
+
+
   .dark-mode  .mobile-footer-info {
     background-color: var(--color-very-dark-desaturated-blue);
   }
