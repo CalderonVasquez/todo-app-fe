@@ -87,7 +87,18 @@ a {
   height: 300px;
   object-fit: cover;
 }
+.dark-mode .hero-img-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 .mobile-hero-light {
+  display: none;
+}
+.mobile-hero-dark {
   display: none;
 }
 .todo-app-wrapper {
@@ -261,7 +272,7 @@ a {
 
 
 .dark-mode .hero-img-dark {
-  display: none;
+  display: block;
 }
 .dark-mode .mobile-hero-dark {
   display: none;
@@ -270,17 +281,25 @@ a {
   display: none;
 }
 
-/* .dark-mode .dark-mode-icon  { 
+.dark-mode .dark-mode-icon  { 
   display: block; 
-} */
+}
 
-  /* .dark-mode .hero-img-light {
-  display: block;
-} */
+  .dark-mode .hero-img-light {
+  display: none;
+}
 
 .dark-mode .todo-app {
   background-color: var(--color-very-dark-blue);
 }
+/* .dark-mode .hero-img-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+} */
 .dark-mode .todo-form input {
   background-color: var(--color-very-dark-desaturated-blue);
   border: var(--color-very-dark-desaturated-blue);
@@ -343,7 +362,7 @@ a {
   object-fit: cover;
 }
 .mobile-hero-dark {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -468,6 +487,10 @@ a {
   .dark-mode .mobile-hero-dark {
     display: block;
   }
+    .dark-mode .light-mode-icon {
+  display: none;
+}
+   
 
 }
 
