@@ -108,6 +108,10 @@ a {
   position: relative;
 }
 
+.light-mode-icon {
+  display: none;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -270,36 +274,32 @@ a {
 
 /*  ---------------- Dark Mode -------------------- */
 
-
+ .dark-mode .hero-img-light {
+  display: none;
+}
 .dark-mode .hero-img-dark {
   display: block;
 }
 .dark-mode .mobile-hero-dark {
   display: none;
 } 
-  .dark-mode .light-mode-icon {
-  display: none;
-}
-
-.dark-mode .dark-mode-icon  { 
-  display: block; 
-}
-
-  .dark-mode .hero-img-light {
-  display: none;
-}
-
+ .dark-mode .dark-mode-icon  { 
+  display: none; 
+} 
+.dark-mode .light-mode-icon {
+  display: block;
+} 
 .dark-mode .todo-app {
   background-color: var(--color-very-dark-blue);
 }
-/* .dark-mode .hero-img-light {
+.dark-mode .hero-img-light {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 300px;
   object-fit: cover;
-} */
+}
 .dark-mode .todo-form input {
   background-color: var(--color-very-dark-desaturated-blue);
   border: var(--color-very-dark-desaturated-blue);
@@ -361,7 +361,7 @@ a {
   height: 200px;
   object-fit: cover;
 }
-.mobile-hero-dark {
+.dark-mode .mobile-hero-dark {
   display: none;
   position: absolute;
   top: 0;
@@ -469,18 +469,12 @@ a {
     font-weight: 400;
     padding-right: 1.25rem;
   }
-
-
   .dark-mode  .mobile-footer-info {
     background-color: var(--color-very-dark-desaturated-blue);
   }
   .dark-mode .mobile-filter-btn {
     background-color: var(--color-very-dark-desaturated-blue);
   }
-  /* .dark-mode .mobile-last-btn {
-
-  } */
-
   .dark-mode .mobile-hero-light {
     display: none;
   }
@@ -488,8 +482,12 @@ a {
     display: block;
   }
     .dark-mode .light-mode-icon {
-  display: none;
+  display: block;
 }
+  .dark-mode .dark-mode-icon {
+    display: none;
+  }
+
    
 
 }
