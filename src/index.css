@@ -107,6 +107,12 @@ a {
   margin: 0 auto;
   position: relative;
 }
+/* .dark-mode .todo-app-wrapper {
+   width: 100%;
+  max-width: 33.75rem;
+  margin: 0 auto;
+  position: relative;
+} */
 
 .light-mode-icon {
   display: none;

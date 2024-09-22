@@ -84,13 +84,13 @@ const App = (props) => {
             <img src="images/bg-desktop-dark.jpg" alt="gradient design" className="hero-img-dark"></img>
             <img src="images/bg-mobile-dark.jpg" alt="gradient design" className="mobile-hero-dark"></img>
                 <div className="todo-app-wrapper">
-                <div className="header">
+                    <div className="header">
                         <h1>TODO</h1>
                         <button onClick={toggleDarkMode}>
                             <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon" />
                             <img src="images/icon-sun.svg" alt="Dark mode toggle icon" className="light-mode-icon" />
                         </button>
-                </div>
+                    </div>
                     <Form addTask={addTask} />
                     <div className="todo-list-wrapper">
                         <ul className="todo-list">
