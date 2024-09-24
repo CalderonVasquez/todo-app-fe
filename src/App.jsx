@@ -29,9 +29,9 @@ const App = (props) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const toggleDarkMode = () => {
-        document.documentElement.classList.toggle('dark-mode');
-    };
+    // const toggleDarkMode = () => {
+    //     document.documentElement.classList.toggle('dark-mode');
+    // };
 
     const addTask = (name) => {
         const newTask = { id: `todo-${nanoid()}`, name, completed: false }
@@ -81,14 +81,14 @@ const App = (props) => {
         <div className="todo-app">
             <img src="images/bg-desktop-light.jpg" alt="mountain range" className="hero-img-light"></img>
             <img src="images/bg-mobile-light.jpg" alt="mountain range" className="mobile-hero-light"></img>
-            <img src="images/bg-desktop-dark.jpg" alt="gradient design" className="hero-img-dark"></img>
-            <img src="images/bg-mobile-dark.jpg" alt="gradient design" className="mobile-hero-dark"></img>
+            {/* <img src="images/bg-desktop-dark.jpg" alt="gradient design" className="hero-img-dark"></img> */}
+            {/* <img src="images/bg-mobile-dark.jpg" alt="gradient design" className="mobile-hero-dark"></img> */}
                 <div className="todo-app-wrapper">
                     <div className="header">
                         <h1>TODO</h1>
-                        <button onClick={toggleDarkMode}>
+                        <button >
                             <img src="images/icon-moon.svg" alt="Dark mode toggle icon" className="dark-mode-icon" />
-                            <img src="images/icon-sun.svg" alt="Dark mode toggle icon" className="light-mode-icon" />
+                            {/* <img src="images/icon-sun.svg" alt="Dark mode toggle icon" className="light-mode-icon" /> */}
                         </button>
                     </div>
                     <Form addTask={addTask} />
