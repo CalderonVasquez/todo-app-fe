@@ -294,7 +294,7 @@ a {
 } 
 .dark-mode .light-mode-icon {
   display: block;
-} 
+}  */
 .dark-mode .todo-app {
   background-color: var(--color-very-dark-blue);
 }
@@ -322,21 +322,11 @@ a {
 }
 .dark-mode .todo-footer > button:last-of-type {
   color: var(--color-very-dark-grayish-blue-dark-1);
-} */
+}
 /*  ---------------- End Dark Mode -------------------- */
 
 
 /* ------------- media query for mobile (540px) ------------- */
-
-/* @media (min-width: 768px) {
-  .dark-mode .mobile-hero-dark {
-    display: none;
-  }
-  .dark-mode .hero-img-light {
-    display: block;
-  }
-} */
-
 @media only screen and (max-width: 540px) {
   .todo-app {
     padding: 1.5rem;
@@ -374,7 +364,6 @@ a {
   height: 200px;
   object-fit: cover;
 }
-
   .header h1 {
     font-size: 1.75rem;
     letter-spacing: 10px;
@@ -474,13 +463,13 @@ a {
     font-weight: 400;
     padding-right: 1.25rem;
   }
-  /* .dark-mode  .mobile-footer-info {
+  .dark-mode  .mobile-footer-info {
     background-color: var(--color-very-dark-desaturated-blue);
   }
   .dark-mode .mobile-filter-btn {
     background-color: var(--color-very-dark-desaturated-blue);
   }
-  .dark-mode .mobile-hero-light {
+  /* .dark-mode .mobile-hero-light {
     display: none;
   }
   .dark-mode .mobile-hero-dark {

@@ -17,7 +17,7 @@ const Form = ({ addTask }) => {
     }
 
     return (
-        <form className="todo-form" onSubmit={handleSubmit}>
+        <form className="dark-mode todo-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 id="new-todo"
