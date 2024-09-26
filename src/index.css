@@ -79,7 +79,7 @@ a {
   background-color: var(--color-very-light-gray);
   height: 800px;
 }
-.hero-img-light {
+.hero-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@ a {
   height: 300px;
   object-fit: cover;
 }
-.dark-mode .hero-img-dark {
+.dark-mode .hero-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,10 +95,7 @@ a {
   height: 300px;
   object-fit: cover;
 }
-.mobile-hero-light {
-  display: none;
-}
-.mobile-hero-dark {
+.mobile-hero {
   display: none;
 }
 .todo-app-wrapper {
@@ -107,13 +104,6 @@ a {
   margin: 0 auto;
   position: relative;
 }
-/* .dark-mode .todo-app-wrapper {
-   width: 100%;
-  max-width: 33.75rem;
-  margin: 0 auto;
-  position: relative;
-} */
-
 .light-mode-icon {
   display: none;
 }
@@ -145,7 +135,7 @@ a {
   height: 4rem;
   border-radius: .40rem;
   padding: 1.25rem 19.5rem 1.25rem 1.5rem;
-  /* margin-top: 2.5rem; */
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   background-color: #fff;
   border: #fff;
@@ -204,7 +194,6 @@ a {
   border: none; 
 }
 
-/* Optional: Remove the label styles if not needed */
 .todo-list li input[type="checkbox"] + label::before {
   display: none;
 }
@@ -279,23 +268,7 @@ a {
 }
 
 /*  ---------------- Dark Mode -------------------- */
-
- /* .dark-mode .hero-img-light {
-  display: none;
-}
-.dark-mode .hero-img-dark {
-  display: block;
-}
-.dark-mode .mobile-hero-dark {
-  display: none;
-} 
- .dark-mode .dark-mode-icon  { 
-  display: none; 
-} 
-.dark-mode .light-mode-icon {
-  display: block;
-}  */
-.dark-mode .todo-app {
+ .todo-app.dark-mode {
   background-color: var(--color-very-dark-blue);
 }
 .dark-mode .todo-form input {
@@ -333,14 +306,14 @@ a {
   }
 }
 @media only screen and (max-width: 459px) {
-  .hero-img-light {
+  .hero-img {
     display: none;
   }
   .header {
     max-width: 20.438rem;
     margin-bottom: 1.75rem;
   }
-  .mobile-hero-light {
+  .mobile-hero {
   display: block;
   position: absolute;
   top: 0;
@@ -349,13 +322,7 @@ a {
   height: 200px;
   object-fit: cover;
 }
-.dark-mode .mobile-hero-light {
-  display: none;
-}
-.dark-mode .hero-img-dark {
-  display: none;
-}
-.dark-mode .mobile-hero-dark {
+ .mobile-hero .dark-mode {
   display: block;
   position: absolute;
   top: 0;
@@ -469,21 +436,12 @@ a {
   .dark-mode .mobile-filter-btn {
     background-color: var(--color-very-dark-desaturated-blue);
   }
-  /* .dark-mode .mobile-hero-light {
-    display: none;
-  }
-  .dark-mode .mobile-hero-dark {
+  .dark-mode .mobile-hero {
     display: block;
   }
-    .dark-mode .light-mode-icon {
-  display: block;
-}
   .dark-mode .dark-mode-icon {
-    display: none;
-  } */
-
-   
-
+    display: block;
+  }
 }
 
 
