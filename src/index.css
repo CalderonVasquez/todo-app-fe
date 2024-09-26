@@ -167,6 +167,9 @@ a {
   padding-bottom: 1.25rem;
   position: relative;
 }
+.todo-list li:hover {
+  font-weight: 700;
+}
 .todo-list li input[type="checkbox"] {
   appearance: none;
   width: 1.5rem;
@@ -192,6 +195,10 @@ a {
 .todo-list li input[type="checkbox"]:checked {
   background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)); 
   border: none; 
+}
+
+.todo-list li input[type="checkbox"]:hover {
+  border: 2px solid linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 .todo-list li input[type="checkbox"] + label::before {
@@ -225,6 +232,9 @@ a {
   font-size: 0.875rem;
   color: var(--color-dark-grayish-blue);
   font-weight: 400;
+}
+.todo-footer p:hover {
+  font-weight: 900;
 }
 
 .filter-btn 
