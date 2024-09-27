@@ -197,14 +197,6 @@ a {
   border: none; 
 }
 
-.todo-list li input[type="checkbox"]:hover {
-  border: 2px solid linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-}
-
-.todo-list li input[type="checkbox"] + label::before {
-  display: none;
-}
-
 .delete-btn {
   border: none;
   background: none;
@@ -242,6 +234,9 @@ a {
   color: var(--color-bright-blue);
   font-weight: 700;
 }
+.blue-btn:hover {
+  font-weight: 900;
+}
 
 .filter-btn {
   display: flex;
@@ -260,6 +255,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.filter-btn button:hover {
+  color: black;
+  font-weight: 400;
 }
 
 .todo-footer > button:last-of-type {
