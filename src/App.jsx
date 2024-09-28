@@ -85,7 +85,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP)
                     className="mobile-hero"
                 />
                 <div className="todo-app-wrapper">
-                    <div className="header">
+                    <header className="header">
                         <h1>TODO</h1>
                         <button type="button" onClick={() => setDarkMode(!darkMode)}>
                             <img
@@ -94,27 +94,29 @@ const FILTER_NAMES = Object.keys(FILTER_MAP)
                                 className="dark-mode-icon"
                             />
                         </button>
-                    </div>
-                    <Form addTask={addTask} />
-                    <div className="todo-list-wrapper">
-                        <ul className="todo-list">{taskList}</ul>
-                        <div className="todo-footer">
-                            <p>{amountOfItems}</p>
-                            <div className="filter-btn">{filterList}</div>
-                            <button className="last-btn" type="button" onClick={clearCompleted}>
-                                Clear Completed
-                            </button>
+                    </header>
+                    <main>
+                        <Form addTask={addTask} />
+                        <div className="todo-list-wrapper">
+                            <ul className="todo-list">{taskList}</ul>
+                            <div className="todo-footer">
+                                <p>{amountOfItems}</p>
+                                <div className="filter-btn">{filterList}</div>
+                                <button className="last-btn" type="button" onClick={clearCompleted}>
+                                    Clear Completed
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="mobile-todo-footer">
-                        <div className="mobile-footer-info">
-                            <p>{amountOfItems}</p>
-                            <button className="mobile-last-btn" type="button" onClick={clearCompleted}>
-                                Clear Completed
-                            </button>
+                        <div className="mobile-todo-footer">
+                            <div className="mobile-footer-info">
+                                <p>{amountOfItems}</p>
+                                <button className="mobile-last-btn" type="button" onClick={clearCompleted}>
+                                    Clear Completed
+                                </button>
+                            </div>
+                            <div className="mobile-filter-btn">{filterList}</div>
                         </div>
-                        <div className="mobile-filter-btn">{filterList}</div>
-                    </div>
+                    </main>
                 </div>
             </div>
         );
