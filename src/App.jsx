@@ -75,12 +75,12 @@ const FILTER_NAMES = Object.keys(FILTER_MAP)
         return (
             <div className={`todo-app ${darkMode ? "dark-mode" : ""}`}>
                 <img
-                    src={darkMode ? "images/bg-desktop-dark.jpg" : "images/bg-desktop-light.jpg"}
+                    src={darkMode ? "/images/bg-desktop-dark.jpg" : "/images/bg-desktop-light.jpg"}
                     alt="gradient design"
                     className="hero-img"
                 />
                 <img
-                    src={darkMode ? "images/bg-mobile-dark.jpg" : "images/bg-mobile-light.jpg"}
+                    src={darkMode ? "/images/bg-mobile-dark.jpg" : "/images/bg-mobile-light.jpg"}
                     alt="gradient design"
                     className="mobile-hero"
                 />
@@ -89,7 +89,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP)
                         <h1>TODO</h1>
                         <button type="button" onClick={() => setDarkMode(!darkMode)}>
                             <img
-                                src={darkMode ? "images/icon-sun.svg" : "images/icon-moon.svg"}
+                                src={darkMode ? "/images/icon-sun.svg" : "/images/icon-moon.svg"}
                                 alt="Dark mode toggle icon"
                                 className="dark-mode-icon"
                             />
