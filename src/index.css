@@ -168,7 +168,7 @@ a {
   position: relative;
 }
 .todo-list li:hover {
-  font-weight: 700;
+  font-weight: 600;
 }
 .todo-list li input[type="checkbox"] {
   appearance: none;
@@ -181,6 +181,9 @@ a {
   outline: none;
   position: relative;
   background-color: #fff; 
+}
+.todo-list li input:hover {
+   border: 2px solid #6eafff;
 }
 .todo-list li input[type="checkbox"]:checked::after {
     content: url('images/icon-check.svg');
@@ -223,19 +226,12 @@ a {
 .todo-footer p {
   font-size: 0.875rem;
   color: var(--color-dark-grayish-blue);
-  font-weight: 400;
+  font-weight: 500;
 }
-.todo-footer p:hover {
-  font-weight: 900;
-}
-
 .filter-btn 
 .blue-btn {
   color: var(--color-bright-blue);
   font-weight: 700;
-}
-.blue-btn:hover {
-  font-weight: 900;
 }
 
 .filter-btn {
@@ -258,10 +254,13 @@ a {
 }
 
 .filter-btn button:hover {
-  color: black;
-  font-weight: 400;
+  color: var(--color-very-dark-blue);
+  font-weight: 600;
 }
-
+.filter-btn .blue-btn:hover {
+  color: var(--color-bright-blue);
+  font-weight: 700;
+}
 .todo-footer > button:last-of-type {
   color: var(--color-dark-grayish-blue);
   font-size: 0.875rem;
@@ -271,7 +270,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 500;
+}
+.todo-footer > button:last-of-type:hover {
+  color: var(--color-very-dark-blue);
+  font-weight: 600;
 }
 .mobile-todo-footer{
   display: none;
@@ -284,6 +287,7 @@ a {
 .dark-mode .todo-form input {
   background-color: var(--color-very-dark-desaturated-blue);
   border: var(--color-very-dark-desaturated-blue);
+  color: var(--color-light-grayish-blue-dark);
 }
 .dark-mode .todo-list-wrapper {
   background-color: var(--color-very-dark-desaturated-blue);
@@ -292,19 +296,43 @@ a {
   color: var(--color-light-grayish-blue-dark);
   border-bottom: 1px solid var(--color-dark-grayish-blue-dark);
 }
+.dark-mode .todo-list li:hover {
+  font-weight: 900;
+}
 .dark-mode .todo-list li input[type="checkbox"] {
   border: 1px solid var(--color-dark-grayish-blue-dark);
   background-color: var(--color-very-dark-desaturated-blue); 
 }
+.dark-mode .todo-list li input:hover {
+  border: 2px solid #6eafff;
+}
 
 .dark-mode .todo-footer p {
   color: var(--color-very-dark-grayish-blue-dark-1);
+  font-weight: 700;
+}
+.dark-mode .filter-btn .blue-btn {
+  color: var(--color-bright-blue);
+  font-weight: 700;
 }
 .dark-mode .filter-btn button {
   color: var(--color-very-dark-grayish-blue-dark-1);
 }
+.dark-mode .filter-btn button:hover {
+  color: var(--color-light-grayish-blue-hover);
+  font-weight: 700;
+}
+.dark-mode .filter-btn .blue-btn:hover {
+  color: var(--color-bright-blue); 
+  font-weight: 700; 
+}
 .dark-mode .todo-footer > button:last-of-type {
   color: var(--color-very-dark-grayish-blue-dark-1);
+  font-weight: 700;
+}
+.dark-mode .todo-footer > button:last-of-type:hover {
+  color: var(--color-light-grayish-blue-hover);
+  font-weight: 700;
 }
 /*  ---------------- End Dark Mode -------------------- */
 
