@@ -34,11 +34,8 @@ const FILTER_NAMES = Object.keys(FILTER_MAP)
         };
 
         const toggleTaskCompleted = (id) => {
-            setTasks((updatedTasks) =>
-                updatedTasks.map((task) =>
-                    id === task.id ? { ...task, completed: !task.completed } : task
-                )
-            );
+            setTasks((updatedTasks) => updatedTasks.map((task) =>
+                id === task.id ? { ...task, completed: !task.completed } : task));
         };
 
         const deleteTask = (id) => {
