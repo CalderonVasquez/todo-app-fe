@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Todo App screeshot](images/Screenshot-ttb-FE.png)
+![Todo App screeshot](public/images/FE-SS-TA.png)
 
 ### Links
 
