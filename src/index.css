@@ -186,7 +186,7 @@ a {
    border: 2px solid #6eafff;
 }
 .todo-list li input[type="checkbox"]:checked::after {
-    content: url('public/images/icon-check.svg');
+    content: url('/images/icon-check.svg');
     display: block;
     position: absolute;
     top: 50%;
